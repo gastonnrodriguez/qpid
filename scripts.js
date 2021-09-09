@@ -5,3 +5,4 @@ menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('active');
   video_background.classList.toggle('active');
 })
+

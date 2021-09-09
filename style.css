@@ -131,6 +131,28 @@ header .logo
 {
   letter-spacing: 6px;
 }
+
+.features{
+  background-color: deepskyblue;
+  
+}
+
+.info1{
+  background-color: deepskyblue;
+  
+}
+
+
+.info2{
+  background-color: deeppink;
+}
+
+
+.info3{
+  background-color: dodgerblue;
+}
+
+
 .social
 {
   position: absolute;
@@ -202,3 +224,4 @@ header .logo
     font-size: 2em;
   }
 }
+
