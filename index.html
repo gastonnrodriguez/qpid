@@ -5,59 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/e9f7097967.js"
+      crossorigin="anonymous"
+    ></script>
     <title>QPID</title>
   </head>
   <body>
-    <div class="video_background">
-      <header>
-        <h2 class="logo">qpid</h2>
-        <div class="toggle"></div>
-      </header>
+    <header>
+      <a href="#" class="brand">QPID></a>
+      <div class="menu-btn"></div>
+      <nav class="navigation">
+        <ul class="navigation-items">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Como funciona</a></li>
+          <li><a href="#">Testimonios</a></li>
+          <li><a href="#">Descargas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="home">
       <video
+        class="video-slide active"
         src="./assets/video/pexels-ron-lach-8892483.mp4"
+        autoplay
         muted
         loop
-        autoplay
       ></video>
-      <hero class="text">
-        <h2>Encontra pareja</h2>
-        <h3>Chicas y chicos esperando por vos</h3>
-        <p>Busca pareja con la mejor app del planeta</p>
-        <a href="#">Registrate</a>
-        <a href="#">Iniciar sesion</a>
-      </hero>
-    </div>
+
+      <div class="content active">
+        <h1>MILES DE PERSONAS CON VOZ</h1>
+        <h2>
+          <span>Escuchar</span> <span>Charlar</span> <br /><span>Conocer</span>
+        </h2>
+        <p>Animate a encontrar el amor de tu vida</p>
+        <button>Registrarse</button>
+        <button>Iniciar sesion</button>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+
     <main>
-        <section class="features">
-            <div class="info1">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, officia eum fuga modi soluta commodi nihil, totam rem perferendis harum ut sint quae ab exercitationem quas magni. Sed, aliquam facilis!</p>
-            </div>
-            <div class="info2"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, officia eum fuga modi soluta commodi nihil, totam rem perferendis harum ut sint quae ab exercitationem quas magni. Sed, aliquam facilis!</p></div>
-            <div class="info3"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, officia eum fuga modi soluta commodi nihil, totam rem perferendis harum ut sint quae ab exercitationem quas magni. Sed, aliquam facilis!</p></div>
-        </section>
+      <section class="features">
+        <div class="info1">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis,
+            officia eum fuga modi soluta commodi nihil, totam rem perferendis
+            harum ut sint quae ab exercitationem quas magni. Sed, aliquam
+            facilis!
+          </p>
+        </div>
+        <div class="info2">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis,
+            officia eum fuga modi soluta commodi nihil, totam rem perferendis
+            harum ut sint quae ab exercitationem quas magni. Sed, aliquam
+            facilis!
+          </p>
+        </div>
+        <div class="info3">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis,
+            officia eum fuga modi soluta commodi nihil, totam rem perferendis
+            harum ut sint quae ab exercitationem quas magni. Sed, aliquam
+            facilis!
+          </p>
+        </div>
+      </section>
     </main>
     <footer>
-      <ul class="social">
-        <li>
-          <a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png" /></a>
-        </li>
-      </ul>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
     </footer>
-    <nav class="menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Sobre nosotros</a></li>
-        <li><a href="#">Ayuda</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
-  </body>  
+  </body>
   <script src="./scripts.js"></script>
 </html>

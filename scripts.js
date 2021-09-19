@@ -1,8 +1,10 @@
-const menuToggle = document.querySelector('.toggle');
-const video_background = document.querySelector('.video_background');
+//Menu
 
-menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-  video_background.classList.toggle('active');
-})
+//Javacript for responsive navigation menu
+const menuBtn = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".navigation");
 
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("active");
+  navigation.classList.toggle("active");
+});
