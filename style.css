@@ -44,11 +44,11 @@ header .navigation {
   position: relative;
 }
 
-header .navigation ul{
+header .navigation ul {
   list-style: none;
 }
 
-header .navigation ul li{
+header .navigation ul li {
   display: inline;
 }
 
@@ -177,6 +177,128 @@ section {
   object-fit: cover;
 }
 
+/*Caracteristicas*/
+
+.features {
+  display: grid;
+  width: 100wv;
+  grid-template-areas:
+    "f1"
+    "f2"
+    "f3";
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr;
+  gap: 120px 0px;
+  border: dodgerblue 10px solid;
+}
+
+.features .info1 {
+  grid-area: f1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "p p p img";
+
+  justify-content: space-around;
+  align-items: center;
+  border: greenyellow 10px solid;
+}
+
+.features .info1 p {
+  grid-area: "p";
+}
+
+.features .info1 img {
+  grid-area: "img";
+}
+
+.features .info2 {
+  grid-area: f2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "img p p p";
+
+  justify-content: space-around;
+  align-items: center;
+  border: red 10px solid;
+}
+
+.features .info2 p {
+  grid-area: "p";
+}
+
+.features .info2 img {
+  grid-area: "img";
+}
+
+.features .info3 {
+  grid-area: f3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "p p p img";
+
+  justify-content: space-around;
+  align-items: center;
+  border: orange 10px solid;
+}
+
+.features .info3 p {
+  grid-area: "p";
+}
+
+.features .info3 img {
+  grid-area: "img";
+}
+
+/*Footer*/
+
+.footer_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "legal info download download"
+    "credits credits credits credits ";
+  border: skyblue 10px solid;
+}
+
+footer .legal {
+  grid-area: "legal";
+  border: blueviolet 5px solid;
+}
+
+footer .legal ul {
+  list-style-type: none;
+}
+
+footer .info {
+  grid-area: "info";
+
+  border: limegreen 5px solid;
+}
+
+footer .info ul {
+  list-style-type: none;
+}
+
+footer .download {
+  grid-area: "download";
+  border: rebeccapurple 5px solid;
+}
+
+.download_bage {
+  width: 200px;
+  height: 8ß0px;
+}
+
+footer .credits {
+  grid-area: "credits";
+  border: yellow 5px solid;
+}
+
+/*Media queries*/
 @media (max-width: 1040px) {
   header {
     padding: 12px 20px;
@@ -202,7 +324,7 @@ section {
     left: 0;
     display: flex;
     justify-content: center;
-    agn-items: center;
+    align-items: center;
     background: rgba(1, 1, 1, 0.5);
   }
 
@@ -225,13 +347,13 @@ section {
     padding: 40px;
     display: flex;
     flex-direction: column;
-    agn-items: center;
+    align-items: center;
     border-radius: 5px;
     box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
   }
 
   .menu-btn {
-    background: url(menu.png) no-repeat;
+    background: url(https://i.ibb.co/HrfVRcx/menu.png) no-repeat;
     background-size: 30px;
     background-position: center;
     width: 40px;
@@ -242,7 +364,7 @@ section {
 
   .menu-btn.active {
     z-index: 999;
-    background: url(close.png) no-repeat;
+    background: url(https://i.ibb.co/rt3HybH/close.png) no-repeat;
     background-size: 25px;
     background-position: center;
     transition: 0.3s ease;
@@ -252,6 +374,6 @@ section {
 @media (max-width: 560px) {
   .home .content h1 {
     font-size: 3em;
-    ne-height: 60px;
+    line-height: 60px;
   }
 }
