@@ -189,27 +189,37 @@ section {
   grid-template-columns: 1fr;
   grid-template-rows: 3fr;
   gap: 120px 0px;
-  border: dodgerblue 10px solid;
+  /* border: dodgerblue 10px solid; */
+}
+.features p {
+  font-size: x-large;
+}
+
+.features p span{
+  font-size: xx-large;
+  font-weight: 600;
 }
 
 .features .info1 {
   grid-area: f1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
-  grid-template-areas: "p p p img";
-
-  justify-content: space-around;
+  grid-template-rows: 2fr;
+  grid-template-areas:"text text text img";
+  justify-content: space-between;
   align-items: center;
-  border: greenyellow 10px solid;
+  /* border: greenyellow 10px solid; */
 }
 
+.features .info1 h3 {
+  grid-area: text;
+}
 .features .info1 p {
-  grid-area: "p";
+  grid-area: text;
 }
 
 .features .info1 img {
-  grid-area: "img";
+  grid-area: img;
 }
 
 .features .info2 {
@@ -218,18 +228,17 @@ section {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   grid-template-areas: "img p p p";
-
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  border: red 10px solid;
+  /* border: red 10px solid; */
 }
 
 .features .info2 p {
-  grid-area: "p";
+  grid-area: p;
 }
 
 .features .info2 img {
-  grid-area: "img";
+  grid-area: img;
 }
 
 .features .info3 {
@@ -238,18 +247,17 @@ section {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   grid-template-areas: "p p p img";
-
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  border: orange 10px solid;
+  /* border: orange 10px solid; */
 }
 
 .features .info3 p {
-  grid-area: "p";
+  grid-area: p;
 }
 
 .features .info3 img {
-  grid-area: "img";
+  grid-area: img;
 }
 
 /*Footer*/
@@ -261,12 +269,13 @@ section {
   grid-template-areas:
     "legal info download download"
     "credits credits credits credits ";
-  border: skyblue 10px solid;
+  /* border: skyblue 10px solid; */
+  padding-left: 100px;
 }
 
 footer .legal {
-  grid-area: "legal";
-  border: blueviolet 5px solid;
+  grid-area: legal;
+  /* border: blueviolet 5px solid; */
 }
 
 footer .legal ul {
@@ -274,9 +283,9 @@ footer .legal ul {
 }
 
 footer .info {
-  grid-area: "info";
+  grid-area: info;
 
-  border: limegreen 5px solid;
+  /* border: limegreen 5px solid; */
 }
 
 footer .info ul {
@@ -284,8 +293,8 @@ footer .info ul {
 }
 
 footer .download {
-  grid-area: "download";
-  border: rebeccapurple 5px solid;
+  grid-area: download;
+  /* border: rebeccapurple 5px solid; */
 }
 
 .download_bage {
@@ -294,8 +303,10 @@ footer .download {
 }
 
 footer .credits {
-  grid-area: "credits";
-  border: yellow 5px solid;
+  grid-area: credits;
+  justify-content: center;
+
+  /* border: yellow 5px solid; */
 }
 
 /*Media queries*/
