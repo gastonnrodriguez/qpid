@@ -21,7 +21,6 @@ pero quiero que este el iniciar sesion ahi, ademas quiero agregar que cuando hag
 /*Header y Menu*/
 header {
   z-index: 999;
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -29,7 +28,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 200px;
-  transition: 0.5s ease;
+  transition: 0.7s ease;
+  overflow: hidden;
+  position: fixed;
+}
+
+.pink{
+  background-color: var(--pink);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 header .brand {
@@ -76,6 +82,8 @@ header .navigation .navigation-items li a:before {
 header .navigation .navigation-items li a:hover:before {
   width: 100%;
 }
+
+/*Modificaciones al hacer scroll hacia abajo*/
 
 /*Home y Video de fondo*/
 
@@ -195,17 +203,20 @@ section {
   font-size: x-large;
 }
 
-.features p span{
+.features p span {
   font-size: xx-large;
   font-weight: 600;
 }
-
+.features img {
+  height: 600px;
+  width: 300px;
+}
 .features .info1 {
   grid-area: f1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 2fr;
-  grid-template-areas:"text text text img";
+  grid-template-areas: "text text text img";
   justify-content: space-between;
   align-items: center;
   /* border: greenyellow 10px solid; */
@@ -299,7 +310,8 @@ footer .download {
 
 .download_bage {
   width: 200px;
-  height: 8ß0px;
+  height: 100px;
+  background-size: cover;
 }
 
 footer .credits {
