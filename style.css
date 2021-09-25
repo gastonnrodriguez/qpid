@@ -1,10 +1,3 @@
-/*TO DO
-Mejorar media queries:
--Para hacerlo mas viano usar una imagen en mobile y video en pc
--cambiar el menu, esta ndo que se muestre hamburguesa del principio,
-pero quiero que este el iniciar sesion ahi, ademas quiero agregar que cuando haga scroll se modifique el nav
-
-*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
 * {
@@ -33,9 +26,9 @@ header {
   position: fixed;
 }
 
-.pink{
+.pink {
   background-color: var(--pink);
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 header .brand {
@@ -149,8 +142,16 @@ section {
   font-size: 1.1em;
   font-weight: 500;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 15px;
+  margin: 20px 0px 0px 20px;
 }
+
+.home .content button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
 /*Redes sociales*/
 .home .media-icons {
   z-index: 888;
@@ -197,7 +198,8 @@ section {
   grid-template-columns: 1fr;
   grid-template-rows: 3fr;
   gap: 120px 0px;
-  /* border: dodgerblue 10px solid; */
+  align-items: center;
+  justify-content: center;
 }
 .features p {
   font-size: x-large;
@@ -208,8 +210,8 @@ section {
   font-weight: 600;
 }
 .features img {
-  height: 600px;
-  width: 300px;
+  height: 900px;
+  width: 400px;
 }
 .features .info1 {
   grid-area: f1;
@@ -219,7 +221,6 @@ section {
   grid-template-areas: "text text text img";
   justify-content: space-between;
   align-items: center;
-  /* border: greenyellow 10px solid; */
 }
 
 .features .info1 h3 {
@@ -238,14 +239,13 @@ section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
-  grid-template-areas: "img p p p";
+  grid-template-areas: "img text text text";
   justify-content: space-between;
   align-items: center;
-  /* border: red 10px solid; */
 }
 
 .features .info2 p {
-  grid-area: p;
+  grid-area: text;
 }
 
 .features .info2 img {
@@ -257,14 +257,13 @@ section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
-  grid-template-areas: "p p p img";
+  grid-template-areas: "text text text img";
   justify-content: space-between;
   align-items: center;
-  /* border: orange 10px solid; */
 }
 
 .features .info3 p {
-  grid-area: p;
+  grid-area: text;
 }
 
 .features .info3 img {
@@ -280,13 +279,10 @@ section {
   grid-template-areas:
     "legal info download download"
     "credits credits credits credits ";
-  /* border: skyblue 10px solid; */
-  padding-left: 100px;
 }
 
 footer .legal {
   grid-area: legal;
-  /* border: blueviolet 5px solid; */
 }
 
 footer .legal ul {
@@ -295,8 +291,6 @@ footer .legal ul {
 
 footer .info {
   grid-area: info;
-
-  /* border: limegreen 5px solid; */
 }
 
 footer .info ul {
@@ -305,7 +299,6 @@ footer .info ul {
 
 footer .download {
   grid-area: download;
-  /* border: rebeccapurple 5px solid; */
 }
 
 .download_bage {
@@ -317,14 +310,17 @@ footer .download {
 footer .credits {
   grid-area: credits;
   justify-content: center;
-
-  /* border: yellow 5px solid; */
 }
 
 /*Media queries*/
+
 @media (max-width: 1040px) {
   header {
     padding: 12px 20px;
+  }
+  .home .content h1 {
+    font-size: 3em;
+    font-weight: 900;
   }
 
   section {
@@ -392,11 +388,53 @@ footer .credits {
     background-position: center;
     transition: 0.3s ease;
   }
-}
 
-@media (max-width: 560px) {
-  .home .content h1 {
-    font-size: 3em;
-    line-height: 60px;
+  .features img {
+    height: 600px;
+    width: 266px;
+  }
+
+  .features .info1 {
+    grid-area: f1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+      "text"
+      "img";
+  }
+
+  .features .info2 {
+    grid-area: f2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+      "text"
+      "img";
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features .info3 {
+    grid-area: f3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+      "text"
+      "img";
+    justify-content: center;
+    align-items: center;
+  }
+  .footer_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "download"
+      "legal"
+      "info"
+      "credits";
   }
 }
