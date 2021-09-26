@@ -26,7 +26,7 @@ window.onscroll = () => {
 };
 
 scrollFunction = () => {
-  let navbar = document.getElementById("navbar");
+  let navbar = document.getElementById("navbarHome");
   if (navbar != null) {
     if (
       document.body.scrollTop > 10 ||

@@ -10,6 +10,10 @@
 :root {
   --pink: #ff1493;
   --white: #ffffff;
+  --primaryPink: #ff1493;
+  --darkPink: #c2185b;
+  --divider: #bdbdbd;
+  --accent: #ff5252;
 }
 /*Header y Menu*/
 header {
@@ -27,7 +31,7 @@ header {
 }
 
 .pink {
-  background-color: var(--pink);
+  background-color: var(--primaryPink);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -136,7 +140,7 @@ section {
 }
 
 .home .content button {
-  background: var(--pink);
+  background: var(--primaryPink);
   padding: 15px 35px;
   color: var(--white);
   font-size: 1.1em;
@@ -199,7 +203,7 @@ section {
   grid-template-rows: 3fr;
   gap: 120px 0px;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
 }
 .features p {
   font-size: x-large;
@@ -279,10 +283,16 @@ section {
   grid-template-areas:
     "legal info download download"
     "credits credits credits credits ";
+  align-items: center;
+  justify-items: center;
+  
 }
 
 footer .legal {
   grid-area: legal;
+}
+.footer_container a{
+  text-decoration: none;
 }
 
 footer .legal ul {
@@ -311,6 +321,70 @@ footer .credits {
   grid-area: credits;
   justify-content: center;
 }
+
+/*Suscripciones*/
+
+#suscriptions #navbar{
+
+}
+
+
+.suscriptions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "plan1 plan2 plan3";
+  align-items: center;
+  justify-items: center;
+  grid-gap: 50px;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 3em;
+}
+
+.suscriptions .plan {
+  background-color: var(--primaryPink);
+  color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  width: 300px;
+  height: 500px;
+  display: grid;
+  align-items: center;
+}
+
+.suscriptions .plan h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.suscriptions .plan button {
+  background-color: var(--darkPink);
+  color: var(--white);
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.suscriptions .plan1 {
+  grid-area: plan1;
+}
+
+.suscriptions .plan2 {
+  grid-area: plan2;
+}
+
+.suscriptions .plan3 {
+  grid-area: plan3;
+}
+
+
+
+/*Como funciona*/
+
+/*Sobre nosotros*/
 
 /*Media queries*/
 
