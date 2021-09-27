@@ -32,9 +32,9 @@ scrollFunction = () => {
       document.body.scrollTop > 10 ||
       document.documentElement.scrollTop > 10
     ) {
-      document.getElementById("navbar").classList.add("pink");
+      navbar.classList.add("pink");
     } else {
-      document.getElementById("navbar").classList.remove("pink");
+      navbar.classList.remove("pink");
     }
   }
 };
