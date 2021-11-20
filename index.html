@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
     <script
       src="https://kit.fontawesome.com/e9f7097967.js"
       crossorigin="anonymous"
@@ -45,14 +45,441 @@
           imagen, QPID te ofrece trascender las barreras de lo casual, te
           propone a alguien especial.
         </p>
-        <button>Registrarse</button>
-        <button>Iniciar sesión</button>
+        <button id="registerTrigger">Registrarse</button>
+        <button id="loginTrigger"  ">Iniciar sesión</button>
       </div>
       <div class="media-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
       </div>
+
+            <!-- Login -->
+      <div id="loginModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="closeLogin">&times;</span>
+             <!-- Esto, usado con void(0)medios, no hace nada : no recargue, no navegue, no ejecute ningún código. -->
+            <form method="POST" action="javascript:void(0);">
+              <div class="container">
+                <h1>Iniciar sesion</h1>
+                <hr>
+              <label for="mailLogin"><b>Email</b></label>
+              <input id="mailLogin" type="email" name="mailLogin" placeholder="Ingrese su correo" class="input-form">
+              <label for="passwordLogin"><b>Password</b></label>
+              <input id="passwordLogin" type="password" name="passwordLogin" placeholder="Ingrese su contraseña" class="input-form">
+              
+              <button id="login" class="loginbtn">Login!</button>
+            </div>
+            </form>
+        </div>
+
+      </div>
+
+      <!-- Registro -->
+      <div id="registerModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="closeRegister">&times;</span>
+           <!-- Esto, usado con void(0)medios, no hace nada : no recargue, no navegue, no ejecute ningún código. -->
+
+    <form method="POST">
+      <div class="container">
+        <h1>Registrate</h1>
+        <p>Por favor llena este formulario para crear tu cuenta</p>
+        <hr>
+
+        <label for="name"><b>Nombre</b></label>
+        <input type="text" placeholder="Nombre..." name="name" id="name" class="input-form" required>
+
+        <label for="age"><b>Edad</b></label>
+        <input id="age" type="number" name="age" placeholder="Ingrese su edad" class="input-form" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" class="input-form" required>
+
+        <label for="gender"><b>Me identifico como:</b></label>
+        <select name="gender" id="gender" class="input-form">
+          <option value="Female">Mujer</option>
+          <option value="Male">Hombre</option>
+        </select>
+
+        <label for="lookingFor"><b>Busco...</b></label>
+        <select name="lookingFor" id="lookingFor" class="input-form">
+          <option value="Female">Mujer</option>
+          <option value="Male">Hombre</option>
+        </select>
+
+        <label for="distance"><b>Radio de busqueda</b></label>
+        <input id="distance" type="number" name="distance" placeholder="Ingrese radio" class="input-form">
+
+        <label for="bio"><b>Sobre mi</b></label>
+        <textarea name="bio" id="bio" cols="30" rows="5" class="input-form"></textarea>
+
+        <label for="image"><b>Foto</b></label>
+        <input id="image" type="text" name="image" placeholder="Ingrese una url de foto" class="input-form">
+
+        <label for=""><b>Intereses</b></label>
+        <div class="tag">
+          <input type="checkbox" id="Gastronomia" name="Gastronomia" value="Gastronomia" class="interestTag">
+          <label for="Gastronomia">Gastronomia</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Instagram" name="Instagram" value="Instagram" class="interestTag">
+          <label for="Instagram">Instagram</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Caminar" name="Caminar" value="Caminar" class="interestTag">
+          <label for="Caminar">Caminar</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Escalada" name="Escalada" value="Escalada" class="interestTag">
+          <label for="Escalada">Escalada</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Reposteria" name="Reposteria" value="Reposteria" class="interestTag">
+          <label for="Reposteria">Reposteria</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Correr" name="Correr" value="Correr" class="interestTag">
+          <label for="Correr">Correr</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Viajar" name="Viajar" value="Viajar" class="interestTag">
+          <label for="Viajar">Viajar</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Intercambio de idiomas" name="Intercambio de idiomas" value="Intercambio de idiomas" class="interestTag">
+          <label for="Intercambio de idiomas">Intercambio de idiomas</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Bloggear" name="Bloggear" value="Bloggear" class="interestTag">
+          <label for="Bloggear">Bloggear</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Peliculas" name="Peliculas" value="Peliculas" class="interestTag">
+          <label for="Peliculas">Peliculas</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Golf" name="Golf" value="Golf" class="interestTag">
+          <label for="Golf">Golf</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Dieta a base de plantas" name="Dieta a base de plantas" value="Dieta a base de plantas" class="interestTag">
+          <label for="Dieta a base de plantas">Dieta a base de plantas</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Fotografia" name="Fotografia" value="Fotografia" class="interestTag">
+          <label for="Fotografia">Fotografia</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Leer" name="Leer" value="Leer" class="interestTag">
+          <label for="Leer">Leer</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Surf" name="Surf" value="Surf" class="interestTag">
+          <label for="Surf">Surf</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Escritura" name="Escritura" value="Escritura" class="interestTag">
+          <label for="Escritura">Escritura</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Deportes" name="Deportes" value="Deportes" class="interestTag">
+          <label for="Deportes">Deportes</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Atletismo" name="Atletismo" value="Atletismo" class="interestTag">
+          <label for="Atletismo">Atletismo</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Cafe" name="Cafe" value="Cafe" class="interestTag">
+          <label for="Cafe">Cafe</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Moda" name="Moda" value="Moda" class="interestTag">
+          <label for="Moda">Moda</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Karaoke" name="Karaoke" value="Karaoke" class="interestTag">
+          <label for="Karaoke">Karaoke</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Salir a tomar algo" name="Salir a tomar algo" value="Salir a tomar algo" class="interestTag">
+          <label for="Salir a tomar algo">Salir a tomar algo</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Gamer" name="Gamer" value="Gamer" class="interestTag">
+          <label for="Gamer">Gamer</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Astrologia" name="Astrologia" value="Astrologia" class="interestTag">
+          <label for="Astrologia">Astrologia</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Espiritualidad" name="Espiritualidad" value="Espiritualidad" class="interestTag">
+          <label for="Espiritualidad">Espiritualidad</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Cocinar" name="Cocinar" value="Cocinar" class="interestTag">
+          <label for="Cocinar">Cocinar</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Futbol" name="Futbol" value="Futbol" class="interestTag">
+          <label for="Futbol">Futbol</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Bailar" name="Bailar" value="Bailar" class="interestTag">
+          <label for="Bailar">Bailar</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Jardineria" name="Jardineria" value="Jardineria" class="interestTag">
+          <label for="Jardineria">Jardineria</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Arte" name="Arte" value="Arte" class="interestTag">
+          <label for="Arte">Arte</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Manualidades" name="Manualidades" value="Manualidades" class="interestTag">
+          <label for="Manualidades">Manualidades</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Politica" name="Politica" value="Politica" class="interestTag">
+          <label for="Politica">Politica</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Ciclismo" name="Ciclismo" value="Ciclismo" class="interestTag">
+          <label for="Ciclismo">Ciclismo</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Museo" name="Museo" value="Museo" class="interestTag">
+          <label for="Museo">Museo</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Aire libre" name="Aire libre" value="Aire libre" class="interestTag">
+          <label for="Aire libre">Aire libre</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Salir de compras" name="Salir de compras" value="Salir de compras" class="interestTag">
+          <label for="Salir de compras">Salir de compras</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Salir de picnic" name="Salir de picnic" value="Salir de picnic" class="interestTag">
+          <label for="Salir de picnic">Salir de picnic</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Comedia" name="Comedia" value="Comedia" class="interestTag">
+          <label for="Comedia">Comedia</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Brunch" name="Brunch" value="Brunch" class="interestTag">
+          <label for="Brunch">Brunch</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Musica" name="Musica" value="Musica" class="interestTag">
+          <label for="Musica">Musica</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Netflix" name="Netflix" value="Netflix" class="interestTag">
+          <label for="Netflix">Netflix</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Disney" name="Disney" value="Disney" class="interestTag">
+          <label for="Disney">Disney</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Amante de los perros" name="Amante de los perros" value="Amante de los perros" class="interestTag">
+          <label for="Amante de los perros">Amante de los perros</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Cerveza artesanal" name="Cerveza artesanal" value="Cerveza artesanal" class="interestTag">
+          <label for="Cerveza artesanal">Cerveza artesanal</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Nadar" name="Nadar" value="Nadar" class="interestTag">
+          <label for="Nadar">Nadar</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Te" name="Te" value="Te" class="interestTag">
+          <label for="Te">Te</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Juegos de mesa" name="Juegos de mesa" value="Juegos de mesa" class="interestTag">
+          <label for="Juegos de mesa">Juegos de mesa</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Trivia" name="Trivia" value="Trivia" class="interestTag">
+          <label for="Trivia">Trivia</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Voluntariado" name="Voluntariado" value="Voluntariado" class="interestTag">
+          <label for="Voluntariado">Voluntariado</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Ecologismo" name="Ecologismo" value="Ecologismo" class="interestTag">
+          <label for="Ecologismo">Ecologismo</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Senderismo" name="Senderismo" value="Senderismo" class="interestTag">
+          <label for="Senderismo">Senderismo</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Vino" name="Vino" value="Vino" class="interestTag">
+          <label for="Vino">Vino</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Vloggear" name="Vloggear" value="Vloggear" class="interestTag">
+          <label for="Vloggear">Vloggear</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Amante de los gatos" name="Amante de los gatos" value="Amante de los gatos" class="interestTag">
+          <label for="Amante de los gatos">Amante de los gatos</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Entrenamiento" name="Entrenamiento" value="Entrenamiento" class="interestTag">
+          <label for="Entrenamiento">Entrenamiento</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Yoga" name="Yoga" value="Yoga" class="interestTag">
+          <label for="Yoga">Yoga</label>
+      </div>
+        
+      
+        <div class="tag">
+          <input type="checkbox" id="Pesca" name="Pesca" value="Pesca" class="interestTag">
+          <label for="Pesca">Pesca</label>
+      </div></div><br>
+
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Ingresar Password" name="password" id="password" class="input-form" required>
+
+        <label for="password-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="password-repeat" id="password-repeat" class="input-form" required>
+        <hr>
+        <div class="conditions">
+        <input id="terms" type="checkbox" name="terms" class="terms" required><p>Estoy de acuerdo con los <a href="#">Terminos y condiciones</a>.</p>
+        </div>
+        <button type="submit" id="register" class="registerbtn">Crear cuenta</button>
+      </div>
+    </form>
+         
+      </div>
+
+       </div>
     </section>
 
     <main>
@@ -104,22 +531,24 @@
       <div class="download">
         <h3>Descargala aqui</h3>
         <a href="#">
-        <img
-          src="./assets/images/appstore.svg"
-          alt="appstore download badge"
-          id="appstore"
-          class="download_bage"
+          <img
+            src="./assets/images/appstore.svg"
+            alt="appstore download badge"
+            id="appstore"
+            class="download_bage"
         /></a>
         <a href="#">
-        <img
-          src="./assets/images/playstore.svg"
-          alt="playstore download badge"
-          id="playstore"
-          class="download_bage"
+          <img
+            src="./assets/images/playstore.svg"
+            alt="playstore download badge"
+            id="playstore"
+            class="download_bage"
         /></a>
       </div>
       <div class="credits">Copyright 2021 Gaston</div>
     </footer>
-    <script src="./scripts.js"></script>
+    <script src="./src/scripts/scripts.js"></script>
+    <script src="./src/scripts/login.js"></script>
+    <script src="./src/scripts/register.js"></script>
   </body>
 </html>
