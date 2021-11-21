@@ -61,7 +61,7 @@
         <div class="modal-content">
           <span class="closeLogin">&times;</span>
              <!-- Esto, usado con void(0)medios, no hace nada : no recargue, no navegue, no ejecute ningún código. -->
-            <form method="POST" action="javascript:void(0);">
+            <form id="loginForm" >
               <div class="container">
                 <h1>Iniciar sesion</h1>
                 <hr>
@@ -85,7 +85,7 @@
         <span class="closeRegister">&times;</span>
            <!-- Esto, usado con void(0)medios, no hace nada : no recargue, no navegue, no ejecute ningún código. -->
 
-    <form method="POST">
+    <form id="registerForm" action="../qpid/src/pages/home.html" >
       <div class="container">
         <h1>Registrate</h1>
         <p>Por favor llena este formulario para crear tu cuenta</p>
@@ -98,7 +98,7 @@
         <input id="age" type="number" name="age" placeholder="Ingrese su edad" class="input-form" required>
 
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" id="email" class="input-form" required>
+        <input type="text" placeholder="Enter Email" name="email" id="emailRegister" class="input-form" required>
 
         <label for="gender"><b>Me identifico como:</b></label>
         <select name="gender" id="gender" class="input-form">
@@ -464,11 +464,11 @@
       </div></div><br>
 
 
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Ingresar Password" name="password" id="password" class="input-form" required>
+        <label for="passwordRegister"><b>Password</b></label>
+        <input type="password" placeholder="Ingresar Password" name="passwordRegister" id="passwordRegister" class="input-form" required>
 
-        <label for="password-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="password-repeat" id="password-repeat" class="input-form" required>
+        <label for="password-repeatRegister"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="password-repeatRegister" id="password-repeatRegister" class="input-form" required>
         <hr>
         <div class="conditions">
         <input id="terms" type="checkbox" name="terms" class="terms" required><p>Estoy de acuerdo con los <a href="#">Terminos y condiciones</a>.</p>

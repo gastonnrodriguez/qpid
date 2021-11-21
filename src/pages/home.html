@@ -15,20 +15,47 @@
     <header id="navbarHome">
       <div class="topnav" id="myTopnav">
         <a href="#home" class="brand">QPID></a>
-        <a href="#news" class="menuItem"><i class="fa fa-fire-alt fa-lg"></i></a>
-        <a href="#contact" class="menuItem"><i class="fa fa-heart fa-lg"></i></a>
-        <a href="#about" class="menuItem"><i class="fa fa-comment fa-lg"></i></a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <a href="#news" class="menuItem"
+          ><i class="fa fa-fire-alt fa-lg"></i
+        ></a>
+        <a href="#contact" class="menuItem"
+          ><i class="fa fa-heart fa-lg"></i
+        ></a>
+        <a href="#about" class="menuItem"
+          ><i class="fa fa-comment fa-lg"></i
+        ></a>
+        <a href="javascript:void(0);" class="icon" onclick="navbarResponsive()">
           <i class="fa fa-bars"></i>
         </a>
       </div>
     </header>
-    <main></main>
+    <main>
+      <div class="tinder">
+        <div class="tinder--status">
+          <i class="fa fa-remove"></i>
+          <i class="fa fa-heart"></i>
+        </div>
+
+        <div class="tinder--cards" id="cardsDeck">
+          <div class="tinder--card">
+            <!-- <img src="https://placeimg.com/600/300/people" /> -->
+            <h3>Demo card 1</h3>
+            <p>This is a demo for Tinder like swipe cards</p>
+          </div>
+        </div>
+        <div class="tinder--buttons">
+          <button id="nope"><i class="fa fa-remove"></i></button>
+          <button id="love"><i class="fa fa-heart"></i></button>
+        </div>
+      </div>
+    </main>
     <footer><div class="credits">Copyright 2021 Gaston</div></footer>
-    <script src="../scripts/proposals.js"></script>
+
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
     <script
       src="https://kit.fontawesome.com/e9f7097967.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../scripts/proposals.js"></script>
   </body>
 </html>

@@ -1,4 +1,6 @@
-const registerButton = document.getElementById("register");
+
+//debugger;
+const registerForm = document.getElementById("registerForm");
 const nameElement = document.getElementById("name");
 const ageElement = document.getElementById("age");
 const genderElement = document.getElementById("gender");
@@ -9,15 +11,17 @@ const imageElement = document.getElementById("image");
 const interests = [];
 const checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
 
-for (var i = 0; i < checkboxes.length; i++) {
+for (let i = 0; i < checkboxes.length; i++) {
   interests.push(checkboxes[i].value);
 }
 
-const mailElement = document.getElementById("mail");
-const passwordElement = document.getElementById("password");
-const passwordRepeatElement = document.getElementById("password-repeat");
+const mailElement = document.getElementById("emailRegister");
+const passwordElement = document.getElementById("passwordRegister");
+const passwordRepeatElement = document.getElementById("password-repeatRegister");
 
-button.addEventListener("click", () => {
+registerForm.addEventListener("submit", () => {
+  //debugger;
+  
   const name = nameElement.value;
   const age = ageElement.value;
   const gender = genderElement.value;
@@ -54,12 +58,13 @@ button.addEventListener("click", () => {
         return response.json();
       })
       .then(function (response) {
-        debugger;
+       // debugger;
 
         if (!response.error) {
-          //localStorage.setItem("token", response.token);
+          //localStorage.setItem("token", response.newUser);
 
           alert(`registro exitoso ${response.newUser}`);
+          window.location = `../qpid/src/pages/home.html`;
         } else {
           alert("registro fallido");
         }

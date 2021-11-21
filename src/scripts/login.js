@@ -1,4 +1,4 @@
-const button = document.getElementById("login");
+const loginForm = document.getElementById("loginForm");
 
 const mailElementLogin = document.getElementById("mailLogin");
 const passwordElementLogin = document.getElementById("passwordLogin");
@@ -42,7 +42,8 @@ button.addEventListener("click", async () => {
 
 //button.addEventListener("click", login());
 */
-button.addEventListener("click", () => {
+loginForm.addEventListener("submit", (event) => {
+  event.preventDefault();
   const mail = mailElementLogin.value;
   const password = passwordElementLogin.value;
 
@@ -63,13 +64,14 @@ button.addEventListener("click", () => {
         return response.json();
       })
       .then(function (response) {
-        // debugger;
+        debugger;
 
         if (!response.error) {
+          alert(`USUARIO RESPUESTA ${JSON.stringify(response.user)}`);
           localStorage.setItem("token", response.token);
-          localStorage.setItem("user", response.user);
-          console.log("Login exitoso");
-          window.location = `../qpid/src/pages/home.html`;
+          localStorage.setItem("user", JSON.stringify(response.user));
+         // alert(`Login exitoso ${response.token}`);
+           window.location = `../qpid/src/pages/home.html`;
         } else {
           alert("Login fallido");
         }
